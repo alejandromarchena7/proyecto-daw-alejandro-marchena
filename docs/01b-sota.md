@@ -16,21 +16,26 @@
 
 *El problema en **una frase**. Después, **3-5 preguntas** que vas a contestar con este documento (por ejemplo: «¿Qué soluciones existen?», «¿Cómo ganan dinero?», «¿Qué tecnologías usan?»). Indica **dónde y cuándo** buscaste (buscadores, tiendas de aplicaciones, repositorios, informes del sector).*
 
-**Problema:** [RELLENAR: una frase]
+**Problema:** Los aficionados al anime tienen dificultades para llevar al día su progreso en múltiples series de forma fluida, sin sufrir sobrecarga publicitaria ni exponerse a spoilers en comunidades masivas.
 
 | # | Pregunta | Dónde busqué | Fecha |
 |---|---|---|---|
-| P1 | [RELLENAR] | | |
+| P1 | ¿Qué plataformas y herramientas existen actualmente para el seguimiento de anime? | Google, Reddit (r/anime), GitHub | 25-nov-2026 |
+| P2 | ¿Qué modelos de negocio y precios utilizan las principales plataformas del sector? | Webs oficiales (MyAnimeList, AniList, Kitsu, SIMKL, TV Time) | 25-nov-2026 |
+| P3 | ¿Cuáles son las principales quejas de los usuarios respecto a usabilidad y spoilers? | Foros de Reddit, reseñas en Google Play / App Store | 25-nov-2026 |
+| P4 | ¿Existen alternativas de código abierto o APIs públicas gratuitas para obtener el catálogo de anime? | GitHub, documentación oficial de Jikan API y AniList API | 25-nov-2026 |
 
 ## 2. Soluciones existentes (CE 1a, 1c, 2a)
 
 *Tabla de **5-8** soluciones (productos, servicios o proyectos de código abierto) que resuelven total o parcialmente el problema. Incluye alguna **alternativa gratuita o de código abierto** y alguna **no digital** (hoja de cálculo, papel) si existe.*
 
 | Solución | Para quién | Qué hace | Modelo de precio | Enlace y fecha de acceso | Estado (`leído` / `sin leer`) |
-|---|---|---|---|---|
-| [RELLENAR] | | | | |
-
-*Figura: comparativa de las soluciones (opcional, un cuadrante o un esquema).*
+|---|---|---|---|---|---|
+| MyAnimeList | Público general | Mezcla red social, foro y BBDD de anime y manga. El sistema web está basado en listas para organizar y puntuar anime y manga. | El uso de la plataforma es gratuito con anuncios. Ofrece una suscripción opcional llamada MAL Supporter. Además, MAL monetiza mediante la venta digital de mangas en su tienda y acuerdos de afiliación con plataformas de streaming como Tokyo Otaku Mode | [MyAnimeList](https://myanimelist.net) 25-nov-26 | leído  |
+| AniList | Público general | Plataforma en línea y red social para catalogar, seguir, puntuar y compartir series y películas de anime, manga, manhwa... También permite organizar títulos vistos, pendientes, en progreso o abandonados. | Completamente gratuito. No cuenta con pagos dentro de su plataforma web. | [AniList](https://anilist.co) 25-nov-26| leído |
+| Kitsu | Público general | Seguimiento de anime/manga con feed de actividad, grupos de discusión, reacciones y recomendaciones. | El uso de la plataforma es gratuito. Ofrece una suscripción opcional: Kitsu PRO para personalización y apoyo al proyecto. | [kitsu.app](https://kitsu.app/) 25-nov-26 | leído |
+| Ryot | Usuarios técnicos o preocupados por la privacidad que prefieren autoalojar sus propios datos. | Gestor de código abierto todo en uno para hacer seguimiento de anime, series, películas, libros y videojuegos sin publicidad. | Código abierto gratuito. Ofrece versión Pro de pago opcional con funciones avanzadas y sincronización en nube. | [github.com/IgnisDa/ryot](https://github.com/IgnisDa/ryot) 25-nov-2026 | leído |
+| "Notas" del móvil/Excel/Hoja de papel | Público en general | Apuntar los episodios vistos por métodos tradicionales y ambiguos. | Gratuito |  |  |
 
 ## 3. Modelos de negocio (CE 1d, 1e)
 
@@ -52,7 +57,8 @@
 
 ## 5. Hueco y diferenciación (CE 1e)
 
-*Qué **no cubren** las soluciones del apartado 2 y qué aporta tu proyecto. Es tu **propuesta de valor**, en 3-5 líneas, sin exagerar: si hay soluciones mejores que la tuya para algunos usuarios, dilo.*
+- Frente a webs muy recargadas de publicidad y con navegación pesada (como MyAnimeList), o con mayor influencia sobre series/películas (como TV Time), KarasuSync apuesta por una interfaz limpia, filtrado instantáneo y foros con control de spoilers.
+- Plataformas alternativas como MyAnimeList ofrecen prestaciones muy superiores en cuanto al alojamiento y la gestión de reseñas. Además, cuentan con una trayectoria de aproximadamente 20 años en el sector, lo que les ha permitido consolidar una comunidad de millones de usuarios y establecer una base de usuarios fiel y activa.
 
 ## 6. Decisiones derivadas (CE 1e, 1f, 2b)
 
