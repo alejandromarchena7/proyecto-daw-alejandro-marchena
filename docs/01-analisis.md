@@ -33,20 +33,20 @@ graph TD
     - Administración y Legal: Gestión de ingresos por publicidad/suscripciones, control y costes de servidores, cumplimiento de normativas RGPD
 ## 2. Necesidades y oportunidades (CE 1c, 1d)
 
-1. **Protección estricta contra spoilers**: Los usuarios dejan de leer un foro por miedo a destripes de la trama. Prioridad media.
-2. **Fluidez y carga dinámica**: Las bases de datos actuales son pesadas y requieren múltiples recargas de página para marcar un episodio. Prioridad alta.
-3. **Alertas pasivas y nativas**: Los usuarios olvidan cuándo se emiten nuevos episodios y quizá no quieran depender del correo electrónico. Prioridad media.
-
-**Oportunidades de negocio:**
-El mercado global de la animación japonesa es uno de los de mayor crecimiento en la industria del entretenimiento. En 2023, el mercado global del anime fue valorado en 31.230 millones de dólares, con una proyección de seguir creciendo en los próximos años, según el informe de mercado de Anime realizado por Grand View Research en el año 2024. Esto genera un público cautivo masivo con altas probabilidades de, al menos plantearse una vez, usar una herramienta como un gestor o una wiki para organizar su consumo.
+| Prioridad | Necesidad | Criterio de prioridad | Fuente | Enlace del dato |
+|---|---|---|---|---|
+| 1 (Alta) | Registrar y actualizar el progreso de episodios de forma rápida | Es la función central del proyecto; sin ella la app no resuelve el problema principal | Análisis de soluciones existentes (SOTA) | [01b-sota.md](01b-sota.md) / [MyAnimeList](https://myanimelist.net/) |
+| 2 (Alta) | Consultar un catálogo actualizado de animes sin introducir datos a mano | Evita mantenimiento manual y garantiza datos fiables desde el primer día | Documentación técnica de API pública | [Jikan API Docs](https://docs.api.jikan.moe/) |
+| 3 (Media) | Filtrar y buscar animes en tiempo real sin recargar la página | Mejora la usabilidad frente a portales lentos o sobrecargados | Quejas frecuentes en comunidades de anime | [Reddit r/anime](https://www.reddit.com/r/anime/) |
+| 4 (Baja) | Evitar spoilers en reseñas o comentarios | Factor diferenciador frente a grandes plataformas, pero secundario respecto al tracking básico | Análisis de competencia (SOTA) | [01b-sota.md](01b-sota.md) |
 
 ## 3. Tipo de proyecto elegido (CE 1e)
 
-Durante la fase inicial de este proyecto, valoré como idea principal el desarrollar una aplicación web enfocada en el ámbito social. Sin embargo, bajo el criterio de pensar qué esa idea no se sostendría a largo plazo, decidí descartar esa vía y apostar por KarasuSync por dos razones:
+Tipo de proyecto: Aplicación web full-stack (gestor/tracker de anime) con arquitectura cliente-servidor.
 
-1. Acotación del alcance y viabilidad: Los proyectos orientados a problemáticas sociales del mundo real normalmente abarcan muchos colectivos y muchas situaciones, KarasuSync resuelve y se centra solo en un problema cotidiano muy específico.
-   
-2. Ajustado a mi perfil profesional: Aunque me hubiera gustado hacer algo relacionado con lo social, pienso que esa alternativa se basaba casi exclusivamente en un sistema de permisos y roles en una BBDD. KarasuSync está planteado para hacer uso de un abanico mucho más completo de las competencias del ciclo. 
+Alternativas descartadas:
+* Aplicación web orientada en la búsqueda de voluntariado: Aplicación web full-stack centrada en la agrupación de distintos recursos sociales que ofrezcan la opción de hacer voluntariado.
+* Desarollo sobre un CMS como Wordpress: Añade una sobrecarga que considero innecesaria, dificulta el uso de MySQL y no se adapta a mi proyecto.
 
 ## 4. Requisitos y restricciones (CE 1f)
 
@@ -74,15 +74,14 @@ Durante la fase inicial de este proyecto, valoré como idea principal el desarro
 
 | Objetivo | Requisito | Caso de uso | Pantalla o endpoint | Prueba o indicador |
 |---|---|---|---|---|
-| OBJ-01 Gestionar el acceso y perfiles de usuario | RF-01 | | | pendiente |
-| OBJ-02 Explorar el catálogo de anime | RF-02 | | | pendiente |
-| OBJ-03 Organizar listas y progreso de visionado | RF-03 | | | pendiente |
-| OBJ-03 Organizar listas y progreso de visionado | RF-04 | | | pendiente |
-| OBJ-04 Ofrecer una interfaz fluida y sin recargas | RF-05 | | | pendiente |
-| OBJ-04 Ofrecer una interfaz fluida y sin recargas | RNF-01 | | | pendiente |
-| OBJ-05 Garantizar seguridad, usabilidad y accesibilidad | RNF-02 | | | pendiente |
-| OBJ-05 Garantizar seguridad, usabilidad y accesibilidad | RNF-03 | | | pendiente |
-| OBJ-05 Garantizar seguridad, usabilidad y accesibilidad | RNF-04 | | | pendiente |
+| OBJ-01 Gestionar el acceso y perfiles de usuario | RF-01 | | | Todos los registros se han completado con éxito |
+| OBJ-02 Explorar el catálogo de anime | RF-02 | | | Respuesta correcta por parte de la API |
+| OBJ-03 Organizar listas y progreso de visionado | RF-03 | | | Creación de al menos 4 estados de lista (viendo, pendientes, completados, favoritos) y registro de progreso sin errores HTTP 500 ni pérdida de datos en MySQL.  |
+| OBJ-03 Organizar listas y progreso de visionado | RF-04 | | | Actualización asíncrona de episodios vistos y puntuación guardada en MySQL tras recargar |
+| OBJ-04 Ofrecer una interfaz fluida y sin recargas | RNF-01 | | | Tiempo de carga inicial y búsquedas inferior a 2 s medido en Chrome DevTools (Network) |
+| OBJ-05 Garantizar seguridad, usabilidad y accesibilidad | RNF-02 | | | 0 consultas SQL sin sentencias preparadas (PDO) y certificado HTTPS activo |
+| OBJ-05 Garantizar seguridad, usabilidad y accesibilidad | RNF-03 | | | 0 desbordamientos horizontales en modo dispositivo de DevTools  |
+| OBJ-05 Garantizar seguridad, usabilidad y accesibilidad | RNF-04 | | | Puntuación igual o superior a 90 en el apartado *Accessibility* de Google Lighthouse |
 
 ## 5. Obligaciones fiscales, laborales y de prevención (CE 1g)
 

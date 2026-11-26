@@ -35,7 +35,7 @@
 | AniList | Público general | Plataforma en línea y red social para catalogar, seguir, puntuar y compartir series y películas de anime, manga, manhwa... También permite organizar títulos vistos, pendientes, en progreso o abandonados. | Completamente gratuito. No cuenta con pagos dentro de su plataforma web. | [AniList](https://anilist.co) 25-nov-26| leído |
 | Kitsu | Público general | Seguimiento de anime/manga con feed de actividad, grupos de discusión, reacciones y recomendaciones. | El uso de la plataforma es gratuito. Ofrece una suscripción opcional: Kitsu PRO para personalización y apoyo al proyecto. | [kitsu.app](https://kitsu.app/) 25-nov-26 | leído |
 | Ryot | Usuarios técnicos o preocupados por la privacidad que prefieren autoalojar sus propios datos. | Gestor de código abierto todo en uno para hacer seguimiento de anime, series, películas, libros y videojuegos sin publicidad. | Código abierto gratuito. Ofrece versión Pro de pago opcional con funciones avanzadas y sincronización en nube. | [github.com/IgnisDa/ryot](https://github.com/IgnisDa/ryot) 25-nov-2026 | leído |
-| "Notas" del móvil/Excel/Hoja de papel | Público en general | Apuntar los episodios vistos por métodos tradicionales y ambiguos. | Gratuito |  |  |
+| Notas del móvil / Hoja Excel / Papel | Público general. | Registro manual de títulos, episodios y notas. | Gratuito. | No aplica · 26-nov-2026 | no aplica |
 
 ## 3. Modelos de negocio (CE 1d, 1e)
 
